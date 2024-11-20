@@ -142,7 +142,6 @@ function log_filter(tag, timestamp, record)
         end
 
     end
-    print("Lua filter processed log: ".. require('cjson').encode(new_record))
     return tag, timestamp, new_record
 end
 
