@@ -1,4 +1,6 @@
 cjson = require("cjson")
+-- This function will be called everytime a log gets inserted into fluentbit
+-- The this filter will check for each namespace of the cluster
 function log_filter(tag, timestamp, record)
     local new_record = {
         namespace = "unknown",
