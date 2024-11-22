@@ -532,4 +532,6 @@ function log_filter(tag, timestamp, record)
     -- Host info
     new_record["host"].name = systemd_slice["_HOSTNAME"] or new_record["host"].name
 
-end
+    return tag, timestamp, new_record
+
+end 
